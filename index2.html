@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>Apíario</title>
+</head>
+<body>
+    <header class="bg-yellow-400 p-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-white">Logo</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="text-black hover:text-black-300">Home</a></li>
+                    <li><a href="#" class="text-black hover:text-blue-300">Produtos</a></li>
+                    <li><a href="#" class="text-black hover:text-blue-300">Sobre</a></li>
+                    <li><a href="#" class="text-black hover:text-blue-300">Contatos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header><!--Header-->
+
+    <section class="text-center py-12 bg-gray-200">
+        <div class="container mx-auto gap-20">
+            <div class="space-y-8 items-center">
+                <h2 class="text-4xl font-bold text-gray-700">Produtos</h2>
+                <p class="text-gray-600 text-xl">Veja os produtos disponíveis.</p>
+            </div>
+
+            <!-- Carrossel de Produtos -->
+            <div class="relative mt-5 overflow-hidden">
+                <div class="flex transition-transform duration-700 ease-out" id="carousel-content" style="transform: translateX(5%);">
+                    <!-- Produto 1 -->
+                    <div class="w-full flex-shrink-0 bg-white p-8 rounded-lg shadow-md mx-5">
+                        <h3 class="text-xl font-semibold mb-4">Produto 1</h3>
+                        <p class="text-gray-600">Descrição do produto 1.</p>
+                    </div>
+                    <!-- Produto 2 -->
+                    <div class="w-full flex-shrink-0 bg-white p-8 rounded-lg shadow-md mx-5">
+                        <h3 class="text-xl font-semibold mb-4">Produto 2</h3>
+                        <p class="text-gray-600">Descrição do produto 2.</p>
+                    </div>
+                    <!-- Produto 3 -->
+                    <div class="w-full flex-shrink-0 bg-white p-8 rounded-lg shadow-md mx-5">
+                        <h3 class="text-xl font-semibold mb-4">Produto 3</h3>
+                        <p class="text-gray-600">Descrição do produto 3.</p>
+                    </div>
+                    <!-- Produto 4 -->
+                    <div class="w-full flex-shrink-0 bg-white p-8 rounded-lg shadow-md mx-52">
+                        <h3 class="text-xl font-semibold mb-4">Produto 4</h3>
+                        <p class="text-gray-600">Descrição do produto 4.</p>
+                    </div>
+                </div>
+
+                <!-- Controles -->
+                <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-none" onclick="prevSlide()"><i class="bi bi-arrow-left"></i></button>
+                <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-full" onclick="nextSlide()"><i class="bi bi-arrow-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12">
+        <div class="container mx-auto text-center space-y-8 px-3">
+            <div>
+                <h2 class="text-4xl font-bold text-gray-700">Contate-nos</h2>
+                <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            </div>
+            <form action="#" method="POST" class="space-y-6">
+                <input type="text" class="block w-full p-4 text-lg rounded-md border-2 border-gray-300" placeholder="Seu Nome">
+                <input type="text" class="block w-full p-4 text-lg rounded-md border-2 border-gray-300" placeholder="Seu E-mail">
+                <input type="text" class="block w-full p-4 text-lg rounded-md border-2 border-gray-300" placeholder="Sua Mensagem">
+                <button type="submit" class="w-full py-3 px-6 text-lg text-white bg-yellow-400 rounded-md hover:bg-blue-600 transition-colors-200">Enviar</button>
+            </form>
+        </div><!--Container Contato-->
+    </section>
+
+    <footer class="bg-yellow-400 p-6 mt-12">
+        <div class="container mx-auto text-center">
+            <p class="text-white text-sm">2024 - Meu site - All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Tailwind e JavaScript para o carrossel -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script>
+        let currentIndex = 0;
+        const totalSlides = document.querySelectorAll("#carousel-content > div").length;
+
+        function updateCarousel() {
+            const carouselContent = document.getElementById("carousel-content");
+            carouselContent.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        // Animação automática
+        setInterval(() => {
+            nextSlide();
+        }, 5000); // alterna a cada 5 segundos
+    </script>
+</body>
+</html>
