@@ -15,6 +15,7 @@ let cart = [];
 // Abrir o modal do carrinho
 cartBtn.addEventListener("click" , function() {
     cartModal.style.display= "flex"
+    updateCartModal();
 })
 
 // Fechar o modal quando clicar fora
@@ -47,13 +48,45 @@ function addToCart(name,price){
 
     if(existingItem){
         existingItem.quantity +=1;
-        return;
+    }else{
+
+        cart.push({
+          name,
+          price,
+          quantity: 1,
+
+        })
     }
     
- cart.push({
-    name,
-    price,
-    quantity: 1,
- })
+    updateCartModal()
 
+}
+
+//Atualiza o carrinho
+function updateCartModal(){
+    carItemsContainer.innerHTML="";
+    let total = 0;
+
+    cart.forEach(item =>{
+        const cartItemElement = document.createElement("div")
+    
+        cartItemElement.innerHTML = `
+        <div>
+            <div>
+                <p>${item.name}</p>
+                <p>${item.quantity}</p>
+                <p>R$ ${item.price}</p>
+            </div>
+
+            <div>
+                <button>
+                    Remover
+                </button>
+            </div>
+
+        </div>
+        `
+        carItemsContainer.appendChild(cartItemElement)
+
+    })
 }
