@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Cardapio.iml" filepath="$PROJECT_DIR$/.idea/Cardapio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/apiario_do_Reino.iml" filepath="$PROJECT_DIR$/.idea/apiario_do_Reino.iml" />
     </modules>
   </component>
 </project>
