@@ -12,13 +12,14 @@
 </style>
 <body>
 
+    <!-- header -->
     <header class="py-4 shadow-sm bg-white">
         <div class="container flex items-center justify-between">
             <!-- Logo -->
-            <a class="w-32" src="./assets/Mel apiario.png" href="index2.html"><h1 class="text-3xl font-bold text-white"></h1></a>
+            <a class="w-32" src="./assets/Mel apiario.png" href="index2.html"><h1 class="text-3xl font-bold text-white"></h1><img src="./assets/Mel apiario.png"></a>
             <!-- Barra de Pesquisa -->
              <div class="w-full max-w-xl relative flex">
-                <span class="absolute left-4 top-3 text-lg text-gray-400">
+                <span class="absolute left-4 top-2 text-lg text-gray-400">
                     <i class="fas fa-search"></i>
                 </span>
                 <input type="text" class="w-full border border-primary border-r-0 pl-12 pr-3 rounded-l-md focus:outline-none" placeholder="Pesquisar">
@@ -60,8 +61,10 @@
             </nav>
              -->
         </div>
-    </header><!-- fim header-->
+    </header>
+    <!-- fim header-->
 
+    <!-- navbar -->
     <nav class="bg-gray-800">
         <div class="container flex">
             <!-- todas categorias -->
@@ -109,54 +112,23 @@
 
         </div>
       </nav>
-
-    <section class="text-center py-12 bg-yellow-200">
-        
-        <div class="container mx-auto gap-20">
-            <div class="space-y-8 items-center">
-                <h2 class="text-4xl font-bold text-gray-700">Produtos</h2>
-                <p class="text-gray-600 text-xl">Veja os produtos disponíveis.</p>
+    <!-- fim navbar -->
+    
+    <!-- banner -->
+     <div class="bg-cover bg-no-repeat bg-center py-24" style="background-image: url('./assets/fundo.png');">
+        <div class="container text-left px-24">
+            <h1 class="text-6xl text-gray-800 font-medium mb-4 capitalize">
+                melhor mel para <br> adquirir na região!
+            </h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. A quas, quae nemo, <br>exercitationem dignissimos earum velit, quaerat omnis inventore doloribus veniam.
+            </p>
+            <div class="mt-12">
+                <a href="#" class="bg-gray-500 border-green-300 text-white px-8 py-3 font-medium rounded-md hover:text-transparent hover:text-primary transition">Compre agora</a>
             </div>
-
-            <!-- Carrossel de Produtos -->
-            <div class="relative mt-5 overflow-hidden m-10">
-                <div class="flex transition-transform duration-700 ease-out" id="carousel-content" style="transform: translateX(5%);">
-                    <!-- Produto 1 -->
-                    <div class="w-full flex-shrink-0 bg-white p-8 rounded-lg shadow-md mx-5">
-                        <h3 class="text-xl font-semibold mb-4">Mel silvestre</h3>
-                        <p class="text-gray-600">O mel silvestre é um tipo de mel multifloral</p>
-                    </div>
-                    <!-- Produto 2 -->
-                     
-                    <div class="w-full flex-shrink-0 bg-white p-8 rounded-lg shadow-md mx-5">
-                        <h3 class="text-xl font-semibold mb-4">Própolis</h3>
-                        <p class="text-gray-600">um produto da colméia, elaborado a partir de exsudatos de resinas.</p>
-                    </div>
-
-                    <!-- Produto 3 -->
-                    <div class="w-full flex-shrink-0 bg-white p-8 rounded-lg shadow-md mx-5">
-                        <h3 class="text-xl font-semibold mb-4">Produto 3</h3>
-                        <p class="text-gray-600">Descrição do produto 3.</p>
-                    </div>
-
-                    <!-- Produto 4 -->
-                    <div class="w-full flex-shrink-0 bg-white p-8 rounded-lg shadow-md mx-5">
-                        <h3 class="text-xl font-semibold mb-4">Produto 4</h3>
-                        <p class="text-gray-600">Descrição do produto 4.</p>
-                    </div>
-                </div>
-
-                <!-- Controles -->
-                <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-md" onclick="prevSlide()"><i class="bi bi-arrow-left"></i></button>
-                <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-md" onclick="nextSlide()"><i class="bi bi-arrow-right"></i></button>
-            </div>
-        </div>
-    </section>
-
-    <section class="text-center py-12 bg-yellow-400">
-    <div class="container mx-auto gap-20">
-        <h1 class="bg-yellow-400">teste</h1>
-    </div>
+        </div> 
+     </div>
+     <!-- fim banner -->
 
     <footer class="bg-yellow-400 p-6 mt-12">
         <div class="table-footer-group ">
@@ -206,7 +178,7 @@
             nextSlide();
         }, 5000); // alterna a cada 5 segundos
     </script>
-    <div class="whats"><!---botão do whatsapp-->
+    <div class="container whats"><!---botão do whatsapp-->
        <a href="//wa.me/5524998776369?text=Estou interessado em algum(s) produtos" target="_blank"> 
         <img src="./assets/whatsapp1.png" width="75" alt="Fale conosco através do whatsapp" title="Fale conosco através do whatsapp" >     
        </a>        
