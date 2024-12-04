@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="./styles/style.css" />
     <title>Apíario</title>
 </head>
-<style>
-.whats{position: fixed;bottom: 30px;right: 30px ;z-index: 9999;}
-</style>
+
 <body>
 
     <!-- header -->
@@ -50,16 +49,6 @@
                     <div class="text-xs leading-3">Conta</div>
                 </a>
               </div>
-
-              <!-- <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="#" class="text-black hover:text-blue-300">Home</a></li>
-                    <li><a href="produto.html" class="text-black hover:text-blue-300">Produtos</a></li>
-                    <li><a href="#" class="text-black hover:text-blue-300">Sobre</a></li>
-                    <li><a href="contato.html" class="text-black hover:text-blue-300">Contatos</a></li>
-                </ul>
-            </nav>
-             -->
         </div>
     </header>
     <!-- fim header-->
@@ -154,31 +143,8 @@
 
     <!-- Tailwind e JavaScript para o carrossel -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-    <script>
-        let currentIndex = 0;
-        const totalSlides = document.querySelectorAll("#carousel-content > div").length;
 
-        function updateCarousel() {
-            const carouselContent = document.getElementById("carousel-content");
-            carouselContent.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }
-
-        function nextSlide() {
-            currentIndex = (currentIndex + 1) % totalSlides;
-            updateCarousel();
-        }
-
-        function prevSlide() {
-            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-            updateCarousel();
-        }
-
-        // Animação automática
-        setInterval(() => {
-            nextSlide();
-        }, 5000); // alterna a cada 5 segundos
-    </script>
-    <div class="container whats"><!---botão do whatsapp-->
+    <div class="whats"><!---botão do whatsapp-->
        <a href="//wa.me/5524998776369?text=Estou interessado em algum(s) produtos" target="_blank"> 
         <img src="./assets/whatsapp1.png" width="75" alt="Fale conosco através do whatsapp" title="Fale conosco através do whatsapp" >     
        </a>        
