@@ -15,4 +15,9 @@
         right: 30px;
         z-index: 9999,
     }
+    .cart{
+        position: fixed;
+        bottom: 30px;
+        left: 30px ;
+        z-index: 9999;}
 }
