@@ -4,20 +4,21 @@
 
 @layer base {
     body {
-        @apply font-sans
+        @apply font-sans;
     }
-    h1,h2,h3,h4,h5,h6{
-        @apply font-roboto
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-roboto;
     }
-    .whats{
+    .whats {
         position: fixed;
         bottom: 30px;
         right: 30px;
-        z-index: 9999,
+        z-index: 9999;
     }
-    .cart{
+    .cart {
         position: fixed;
         bottom: 30px;
         left: 30px ;
-        z-index: 9999;}
+        z-index: 9999;
+    }
 }

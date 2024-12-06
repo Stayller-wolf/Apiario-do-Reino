@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./Apiario-do-Reino-main/**/*.{html,js}"],
+  content: ["./Apiario-do-Reino-main/**/*.{html,js}"], // Define os arquivos onde o Tailwind busca classes
+  darkMode: 'class', // 'media' para ativar pelo sistema, 'class' para ativar manualmente
   theme: { 
     screens: {
       sm: '576px',
@@ -10,26 +11,21 @@ module.exports = {
     },
     container: {
       center: true,
-      padding: '1rem',
+      padding: '4rem', // Garante espaçamento interno
     },
     extend: {
       fontFamily: {
-        sans: ['Roboto', 'sans-serif'],
+        poppins: "'Poppins', sans-serif",
+        roboto: "'Roboto', sans-serif",
       },
       colors: {
         primary: '#FDE010',
-        secundary: '#000000'
+        secundary: '#000000',
       },
       backgroundImage: {
         home: "url('/assets/abelha 1.png')",
       },
     },
-  },
-  variants: {
-    extend: {
-      display: ['group-hover'],
-      visibility: ['group-hover'],
-    }
   },
   plugins: [],
 };
