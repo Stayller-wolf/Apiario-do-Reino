@@ -10,33 +10,105 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="./styles/style.css"/>
     <title>Produtos</title>
+
+
 </head>
     <body>
-        <header class="bg-yellow-400 p-6">
-            <div class="container mx-auto flex justify-between items-center">
-                <a href="index2.html"><h1 class="text-3xl font-bold text-white">Ápiario do Reino</h1></a>
-                <nav>
-                    <ul class="flex space-x-4">
-                        <li><a href="index2.html" class="text-black hover:text-blue-300">Home</a></li>
-                        <li><a href="produto.html" class="text-black hover:text-blue-300">Produtos</a></li>
-                        <li><a href="sobre.html" class="text-black hover:text-blue-300">Sobre</a></li>
-                        <li><a href="contato.html" class="text-black hover:text-blue-300">Contatos</a></li>
-                    </ul>
-                </nav>
+    <!-- header -->
+    <header class="py-4 shadow-sm bg-white">
+        <div class="container flex items-center justify-between">
+            <!-- Logo -->
+            <a class="w-32" src="./assets/Mel apiario.png" href="index2.html"><h1 class="text-3xl font-bold text-white"></h1><img src="./assets/Mel apiario.png"></a>
+            <!-- Barra de Pesquisa -->
+            <div class="w-full max-w-xl relative flex">
+                <span class="absolute left-4 top-2 text-lg text-gray-400">
+                    <i class="fas fa-search"></i>
+                </span>
+                <input type="text" class="w-full border border-primary border-r-0 pl-12 pr-3 rounded-l-md focus:outline-none" placeholder="Pesquisar">
+                <button class="bg-yellow-400 border border-primary text-black px-8 rounded-r-md hover:bg-transparent hover:text-secundary transition">Pesquisar</button>
             </div>
+            <!-- Icones -->
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-center text-gray-700 hover:text-yellow-400 transition relative">
+                    <div class="text-2x1">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="text-xs leading-3">Lista de Desejo</div>
+                    <span class="absolute right-0 -top-1 w-12 h-5 rounded-full flex items-center justify-center bg-primary text-black text-xs">8</span>
+                </a>
 
-            
-        </header>
-        <!--Fim do header-->
-        
-           
-        <h2 class="text-2xl font-bold text-center mt-9 mb-6">
-             Conheça nossos produtos!
-        </h2>
-        
-         <!---Inicio do menu-->
+                <a href="*" class="text-center text-gray-700 hover:text-yellow-400 transition relative">
+                        <div class="text-2x1">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <div class="text-xs leading-3">Carrinho</div>
+                        <span class="absolute -right-3 -top-1 w-10 h-5 rounded-full flex items-center justify-center bg-primary text-black text-xs">8</span>
+                </a>
+
+                <a href="#" class="text-center text-gray-700 hover:text-yellow-200 transition relative">
+                    <div class="text-2x1">
+                        <i class="far fa-user"></i>
+                    </div>
+                    <div class="text-xs leading-3">Conta</div>
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- fim header-->
+    
+    <!-- navbar -->
+    <nav class="bg-gray-800">
+            <div class="container flex">
+                <!-- todas categorias -->
+                 <div class="px-8 py-4 bg-yellow-400 flex items-center cursor-pointer relative group">
+                    <span class="text-white">
+                        <i class="fas fa-bars"></i>
+                    </span>
+                    <span class="capitalize ml-2 text-white">Todas categorias</span>
+    
+                    <div class="absolute w-full left-0 top-full bg-white shadow-md py-3 divide-y divide-gray-300 divide-solid hidden group-hover:block">
+                        <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                            <img src="./assets/abelha 1.png" class="w-5 h-5 object-contain">
+                            <span class="ml-6 text-gray-600 text-sm">ABELHA</span>
+                        </a>
+    
+                        <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                            <img src="./assets/abelha1.svg" class="w-5 h-5 object-contain">
+                            <span class="ml-6 text-gray-600 text-sm">ABELHA</span>
+                        </a>
+    
+                        <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                            <img src="./assets/abelha1.svg" class="w-5 h-5 object-contain">
+                            <span class="ml-6 text-gray-600 text-sm">ABELHA</span>
+                        </a>
+    
+                        <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                            <img src="./assets/abelha1.svg" class="w-5 h-5 object-contain">
+                            <span class="ml-6 text-gray-600 text-sm">ABELHA</span>
+                        </a>
+                    </div>
+                 </div>
+                
+                <!-- Fim todas categorias -->
+    
+                <!-- navbar links -->
+                 <div class="flex items-center justify-between flex-grow pl-12">
+                    <div class="flex items-center space-x-6 capitalize">
+                        <a href="index2.html" class="text-gray-200 hover:text-white transition">Ínicio</a>
+                        <a href="./produto.html" class="text-gray-200 hover:text-white transition">Produtos</a>
+                        <a href="sobre.html" class="text-gray-200 hover:text-white transition">Sobre</a>
+                        <a href="./contato.html" class="text-gray-200 hover:text-white transition">Contate-nos</a>
+                    </div>
+                    <a href="#" class="text-gray-200 hover:text-white transition">Login/Registrar-se</a>
+                 </div>
+    
+            </div>
+        </nav>
+        <!-- fim navbar -->
+    
+    <!---Inicio do menu-->
     <div id="menu">
-         <main class="grid grid-cols-1 md:grid-cols-1 gap-7 md:gap-20 mx-auto max-w-7xl px-2 mb-20">
+         <main class="m-10 grid grid-cols-1 md:grid-cols-1 gap-7 md:gap-20 mx-auto max-w-7xl px-2 mb-20">
             <!--Produtos item-->
             <div class="flex gap-2">
             <img src="./assets/Mel apiario.png" alt="mel silvestre" class="w-28 h-28 rounded-md  hover:scale-110 hover:-rotate-2 duration-300"/>
