@@ -22,3 +22,8 @@
         z-index: 9999;
     }
 }
+    .menu {
+        display: block;
+        flex-direction: column;
+        padding: 10px;
+    }
