@@ -1,0 +1,14 @@
+title: Apiario do Reino
+email: email@example.com
+description: >- # Este é o "resumo" do seu site
+  Um site sobre apicultura.
+baseurl: "/loja" # o sub-path do seu site, por exemplo, /blog
+url: "https://stayller-wolf.github.io/Apiario-do-Reino/" # a URL do seu site
+theme: jekyll-theme-minimal
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-sitemap
+exclude:
+  - node_modules
